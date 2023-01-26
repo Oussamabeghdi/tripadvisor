@@ -1,0 +1,137 @@
+/* GENERAL */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Trip SansR, sans-serif;
+}
+.container {
+  width: 1135px;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 54px;
+  font-family: Trip SansM, sans-serif;
+  margin: 20px 0 10px 0;
+  font-weight: bolder;
+}
+h1 span {
+  color: #ff5d5d;
+}
+/* ----------------------------- */
+/* HEADER */
+/* ----------------------------- */
+header {
+  height: 60px;
+  border: 1px solid red;
+}
+header img {
+  width: 190px;
+}
+header nav {
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* height: 100%; */
+  /* width: 100px; */
+}
+/* header nav span {
+    margin-left: 5px;
+  } */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+header a {
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+header a:hover {
+  background-color: lightgrey;
+}
+header button {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+/* ----------------------------- */
+/* MAIN */
+/* ----------------------------- */
+h1 + p {
+  font-size: 14px;
+}
+/* Menu */
+.menu {
+  /* border: 3px solid red; */
+  /* height: 100px; */
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+.menu div {
+  border: 1px solid black;
+  border-radius: 10px;
+  /* height: 100%; */
+  width: calc((100% - 50px) / 6);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* ImaegsBloc */
+.imagesBloc {
+  height: 430px;
+  /* border: 1px solid black; */
+  display: flex;
+  gap: 2px;
+}
+.imagesBloc .col1 {
+  /* background-color: blue; */
+  height: 100%;
+  flex: 1;
+}
+.imagesBloc .col2 {
+  /* background-color: green; */
+  height: 100%;
+  width: 480px;
+}
+.imagesBloc img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagesBloc .col2 div {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: calc(50% - 1px);
+}
+
+.imagesBloc .col2 div:first-child {
+  margin-bottom: 2px;
+}
+.texteBloc h2 {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+}
+p {
+  line-height: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.texteBloc div {
+}
