@@ -11,7 +11,8 @@
       src="https://kit.fontawesome.com/56558cff47.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+
+    <title>Tripadvisor</title>
   </head>
   <body>
     <header>
@@ -19,32 +20,81 @@
         <img
           src="./assets/css/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
         />
+        <div>
+          <input class="searchbar" type="text" />
+        </div>
+
         <nav>
           <a href="#"><i class="fa-solid fa-pen"></i> <span>Avis</span></a>
-          <a href="#"><i class="fa-solid fa-pen"></i> <span>Voyages</span></a>
-          <a href="#"><i class="fa-solid fa-pen"></i> <span>Alertes</span></a>
-          <button>Connectez-vous</button>
-          <a href="#"><i class="fa-solid fa-pen"></i> <span>Panier</span></a>
+          <a href="#"
+            ><i class="fa-regular fa-heart"></i> <span>Voyages</span></a
+          >
+          <a href="#"
+            ><i class="fa-regular fa-bell"></i> <span>Alertes</span></a
+          >
+          <!-- <button id="open-modal">Connectez-vous</button> -->
+          <button
+            onclick="document.getElementById('modal').style.display='block'"
+          >
+            Connectez-vous
+          </button>
+
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Inscription</h2>
+              <form>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required />
+
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required />
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required />
+
+                <input type="submit" value="S'inscrire" />
+              </form>
+            </div>
+          </div>
+
+          <!-- <button
+            onclick="window.location.href='./Formulaire/formulaire_de_connexion.html' "
+          >
+            Connectez-vous
+          </button> -->
+          <a href="#"
+            ><i class="fa-solid fa-cart-shopping"></i><span>Panier</span></a
+          >
         </nav>
       </div>
     </header>
 
     <main>
       <div class="container">
-        <h1><span>Explorer</span><span>Paris</span></h1>
+        <h1>
+          <span>Explorez</span><span class="second-word-title">Paris</span>
+        </h1>
         <p>
           Les revenus influencent le choix des expériences présentées sur cette
           page : en savoir plus.
         </p>
         <nav class="menu">
-          <div><span>Hôtels</span><i class="fa-solid fa-pen"></i></div>
+          <div><span>Hôtels</span><i class="fa-solid fa-bed"></i></div>
           <div>
             <span>Location de vacances</span><i class="fa-solid fa-pen"></i>
           </div>
           <div><span>Activités</span><i class="fa-solid fa-pen"></i></div>
-          <div><span>Restaurants</span><i class="fa-solid fa-pen"></i></div>
-          <div><span>Forum de voyage</span><i class="fa-solid fa-pen"></i></div>
-          <div><span> Plus</span><i class="fa-solid fa-pen"></i></div>
+          <div>
+            <span>Restaurants</span><i class="fa-solid fa-utensils"></i>
+          </div>
+          <div>
+            <span>Forum de voyage</span><i class="fa-solid fa-globe"></i>
+          </div>
+          <div><span> Plus</span><i class="fa-solid fa-ellipsis"></i></div>
         </nav>
 
         <section class="imagesBloc">
@@ -57,27 +107,478 @@
           </div>
         </section>
 
-
         <div class="breadcrum">
-            <nav>
-                <a href=""></a><span></span><a href=""></a><span></span><a href=""></a><span></span><a href=""></a><span></span>
-                <p>Visitez: Paris</p>
-            </nav>
+          <nav>
+            <a
+              href="https://www.tripadvisor.fr/Tourism-g4-Europe-Vacations.html"
+              >Europe</a
+            ><span> > </span
+            ><a
+              href="https://www.tripadvisor.fr/Tourism-g187070-France-Vacations.html"
+              >France</a
+            ><span> > </span
+            ><a
+              href="https://www.tripadvisor.fr/Tourism-g187144-Ile_de_France-Vacations.html"
+              >Ile-de-France</a
+            ><span> > </span
+            ><a
+              href="https://www.tripadvisor.fr/Tourism-g187147-Paris_Ile_de_France-Vacations.html"
+              >Paris</a
+            ><span></span>
+          </nav>
+          <p>Visitez: Paris</p>
         </div>
-        <section>
-          <div class="texteBloc"></div>
-          <h2>La Ville Lumière éblouit en tous points</h2>
-          <p>
-            Aucun autre endroit au monde ne fait autant rêver que Paris. La
-            ville séduit par son art, son architecture, sa culture et sa
-            cuisine, mais il y a aussi des merveilles plus discrètes qui
-            n’attendent qu’à être explorées : les ruelles pavées pittoresques,
-            les pâtisseries au coin de la rue et les petits bistrots douillets
-            qui vous invitent à boire un verre de beaujolais. Préparez-vous à
-            vous approprier Paris
-          </p>
+
+        <section class="bloc">
+          <div class="col1">
+            <h2>La Ville Lumière éblouit en tous points</h2>
+            <p>
+              Aucun autre endroit au monde ne fait autant rêver que Paris. La
+              ville séduit par son art, son architecture, sa culture et sa
+              cuisine, mais il y a aussi des merveilles plus discrètes qui
+              n’attendent qu’à être explorées : les ruelles pavées pittoresques,
+              les pâtisseries au coin de la rue et les petits bistrots douillets
+              qui vous invitent à boire un verre de beaujolais. Préparez-vous à
+              vous approprier Paris
+            </p>
+          </div>
+          <div class="col2">
+            <div>
+              <h4>Paris : commencez à organiser!</h4>
+              <p>
+                Créer un voyage pour enregistrer et organiser toutes vos idées
+                et les visualiser sur une carte.
+              </p>
+              <button>Créez un voyage</button>
+            </div>
+            <div><img src="./assets/css/img/map.png" alt="" /></div>
+          </div>
+        </section>
+        <h2>Paris : les immanquables</h2>
+        <section class="unmissable">
+          <div>
+            <h3>Se divertir</h3>
+            <p>
+              Des lieux à voir, des rues à explorer et des expériences
+              emblématiques à Paris.
+            </p>
+            <a
+              href="https://www.tripadvisor.fr/Attractions-g187147-Activities-Paris_Ile_de_France.html"
+            >
+              <span>Tout afficher</span></a
+            >
+          </div>
+
+          <div class="carrousel">
+            <div class="col">
+              <div>
+                <img src="./assets/css/img/eiffeltoren.jpg" alt="" />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>La Tour Eiffel</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+                <p>
+                  Tours et plateformes d'oservation, Monuments & Points
+                  d'intérêt
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <img
+                  src="./assets/css/img/cour-napoleon-et-pyramide.jpg"
+                  alt=""
+                />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>Musée du Louvre</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+
+                <p>Batiments architecturaux, Musées d'art</p>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <img
+                  src="./assets/css/img/arc-de-triomphe-at-night.jpg"
+                  alt=""
+                />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>Arc de Triomphe</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+
+                <p>Batiments architecturaux, Sites historiques</p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div>
+                <img
+                  src="./assets/css/img/vue-de-la-cour-d-honneur.jpg"
+                  alt=""
+                />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>Musée Rodin Paris VII</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+
+                <p>Musées spécialisés</p>
+              </div>
+            </div>
+            <div class="col">
+              <a href="#">
+                <div>
+                  <img src="./assets/css/img/the-bookstore.jpg" alt="" />
+                  <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+                </div>
+                <div>
+                  <h5>Librairie Shakespeare and Company Paris V</h5>
+
+                  <div style="color: #00aa6c">
+                    <i class="fa-solid fa-circle"></i
+                    ><i class="fa-solid fa-circle"></i
+                    ><i class="fa-solid fa-circle"></i
+                    ><i class="fa-solid fa-circle"></i
+                    ><i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                  </div>
+                  <p>Bibliothèques, Grands magasins</p>
+                </div></a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="unmissable">
+          <div>
+            <h3>Se reposer</h3>
+            <p>Un mélange de charme, de symboles et de modernité.</p>
+            <a
+              href="https://www.tripadvisor.fr/Attractions-g187147-Activities-Paris_Ile_de_France.html"
+            >
+              <span>Tout afficher</span></a
+            >
+          </div>
+
+          <div class="carrousel">
+            <div class="col">
+              <div>
+                <img
+                  src="./assets/css/img/le-bristol-paris-colonnade.jpg"
+                  alt=""
+                />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>Le Bristol Paris</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <img src="./assets/css/img/detail.jpg" alt="" />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>La Réserve Paris - Hotel and Spa</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <img
+                  src="./assets/css/img/le-meurice-paris-restaurant.jpg"
+                  alt=""
+                />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>Le Meurice</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div>
+                <img
+                  src="./assets/css/img/four-seasons-hotel-george.jpg"
+                  alt=""
+                />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>Four Seasons Hotel George V</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <img src="./assets/css/img/cosy.jpg" alt="" />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>The Hoxton, Paris</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="unmissable">
+          <div>
+            <h3>Se restaurer</h3>
+            <p>Bistrots et bars typiques, et plus encore à Paris</p>
+            <a
+              href="https://www.tripadvisor.fr/Attractions-g187147-Activities-Paris_Ile_de_France.html"
+            >
+              <span>Tout afficher</span></a
+            >
+          </div>
+
+          <div class="carrousel">
+            <div class="col">
+              <div>
+                <img
+                  src="./assets/css/img/20170629-134456-largejpg.jpg"
+                  alt=""
+                />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>Juveniles Wine Bar</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+                <p>€€-€€€ . Françcaise, Européenne, Bar à vins</p>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <img src="./assets/css/img/terrasse-de-gigi.jpg" alt="" />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>Crêperie Gigi</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+
+                <p>
+                  €€-€€€ . Française, Végétariens bienvenus, Choix végétariens
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <img
+                  src="./assets/css/img//restaurant-aspic-quentin.jpg"
+                  alt=""
+                />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>ASPIC</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+
+                <p>€€€€ . Française, Européenne, Moderne</p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div>
+                <img src="./assets/css/img/pedzouille.jpg" alt="" />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>Pedzouille</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+
+                <p>€€-€€€ . Française, Européenne</p>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <img src="./assets/css/img/frenchie.jpg" alt="" />
+                <div class="cercle"><i class="fa-regular fa-heart"></i></div>
+              </div>
+              <div>
+                <h5>frenchie - Rue du Nil</h5>
+                <div style="color: #00aa6c">
+                  <i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i
+                  ><i class="fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                  <span style="color: black">1351</span>
+                </div>
+
+                <p>
+                  €€€€ . Française, Végétariens bienvenus, Plats sans gluten
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="get-away">
+          <div class="col-escape">
+            <div class="col-left">
+              <div>
+                <h4>Évadez-vous</h4>
+                <p>
+                  Visites, attractions et activites Best of the Best à ne pas
+                  manquer
+                </p>
+              </div>
+
+              <button class="show-list-btn"><span>Voir la liste</span></button>
+            </div>
+            <div class="col-right">
+              <img src="./assets/css/img/travlers-choice.jpg " alt="" />
+            </div>
+          </div>
         </section>
       </div>
     </main>
+    <footer>
+      <div>
+        <p>
+          Made at
+          <a
+            href="https://www.lereacteur.io/?utm_source=googleads&gad=1&gclid=Cj0KCQjwmN2iBhCrARIsAG_G2i7YyMBzuemRS2Rcas1m27gvGK-VqAT9mstIZ5OBpqBD2lHYYMlGdCQaAjXfEALw_wcB"
+            >Le Reacteur</a
+          >
+          by <strong>Oussama Beghdi</strong> - 2023
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Fermer le modal lorsqu'on clique en dehors de la zone du formulaire
+      window.onclick = function (event) {
+        var modal = document.getElementById("modal");
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+        var closeModalBtn = document.getElementsByClassName("close")[0];
+
+        function closeModal() {
+          modal.style.display = "none";
+        }
+        closeModalBtn.addEventListener("click", closeModal);
+      };
+    </script>
+    <!-- <script>
+      var modal = document.getElementById("modal");
+      var openModalBtn = document.getElementById("open-modal");
+      var closeModalBtn = document.getElementsByClassName("close")[0];
+
+      // Fonction pour ouvrir la modal
+      function openModal() {
+        modal.style.display = "block";
+      }
+
+      // Fonction pour fermer la modal
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      // Événement pour ouvrir la modal
+      openModalBtn.addEventListener("click", openModal);
+
+      // Événement pour fermer la modal
+      closeModalBtn.addEventListener("click", closeModal);
+    </script> -->
   </body>
 </html>
