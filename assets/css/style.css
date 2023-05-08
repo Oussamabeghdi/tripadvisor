@@ -9,7 +9,6 @@ body {
 .container {
   width: 1135px;
   margin: 0 auto;
-  /* border: 1px solid black; */
 }
 a {
   color: inherit;
@@ -46,9 +45,9 @@ h4 {
 /* ----------------------------- */
 /* HEADER */
 /* ----------------------------- */
+
 header {
   height: 60px;
-  /* border: 1px solid red; */
 }
 header img {
   width: 190px;
@@ -63,7 +62,6 @@ header img {
   background-size: 17px 17px;
   background-repeat: no-repeat;
   background-position: 8px;
-  /* padding: 0.8rem; */
   outline: none;
 }
 
@@ -72,16 +70,11 @@ input[type="text"] {
 }
 
 header nav {
-  /* border: 1px solid green; */
   display: flex;
   align-items: center;
   gap: 10px;
-  /* height: 100%; */
-  /* width: 100px; */
 }
-/* header nav span {
-    margin-left: 5px;
-  } */
+
 header .container {
   display: flex;
   align-items: center;
@@ -99,7 +92,6 @@ header a:hover {
 header button {
   background-color: black;
   height: 35px;
-
   color: white;
   padding: 5px 10px;
   border-radius: 20px;
@@ -119,20 +111,20 @@ header button {
 h1 + p {
   font-size: 14px;
 }
-/* Menu */
+
+/* ----------------------------- */
+/*-------- Menu --------*/
+/* ----------------------------- */
+
 .menu {
-  /* border: 3px solid red; */
-  /* height: 100px; */
   display: flex;
   gap: 10px;
   margin: 20px 0;
-  /* position: fixed; */
 }
 
 .menu div {
   border: 1px solid black;
   border-radius: 10px;
-  /* height: 100%; */
   width: calc((100% - 50px) / 6);
   padding: 16px;
   display: flex;
@@ -140,22 +132,18 @@ h1 + p {
   gap: 20px;
 }
 
-/* ImaegsBloc */
 .imagesBloc {
   height: 430px;
-  /* border: 1px solid black; */
   display: flex;
   gap: 2px;
 }
 
 .imagesBloc .col1 {
-  /* background-color: blue; */
   height: 100%;
   flex: 1;
 }
 
 .imagesBloc .col2 {
-  /* background-color: green; */
   height: 100%;
   width: 480px;
 }
@@ -168,7 +156,6 @@ h1 + p {
 }
 
 .imagesBloc .col2 div {
-  /* border: 1px solid black; */
   width: 100%;
   height: calc(50% - 1px);
 }
@@ -183,7 +170,6 @@ h1 + p {
 }
 p {
   line-height: 10px;
-  /* font-family: Georgia, "Times New Roman", Times, serif; */
 }
 .breadcrum nav,
 .breadcrum p {
@@ -195,7 +181,10 @@ p {
   justify-content: space-between;
   display: flex;
 }
+
+/* ----------------------------- */
 /* Bloc---------------- */
+/* ----------------------------- */
 
 .bloc {
   display: flex;
@@ -204,7 +193,6 @@ p {
 
 .bloc .col1 {
   height: 100%;
-  /* flex: 1; */
   width: 650px;
   padding-right: 50px;
 }
@@ -215,10 +203,7 @@ p {
 }
 
 .bloc .col2 {
-  /* height: 400px; */
-  /* width: 350px; */
   flex: 1;
-  /* width: 400px; */
 }
 .bloc .col2 div:first-child {
   background-color: #fe5d5d;
@@ -249,69 +234,8 @@ p {
   height: 35px;
   width: 130px;
 }
-/* 
-.unmissable {
-  display: flex;
-  gap: 15px;
-  height: 350px;
-  background-color: #ff5d5d;
-
-  
-} */
-
-/* .unmissable .title {
-  font-size: 20px;
-  line-height: 20px;
-}
-
-.unmissable .infos {
-  height: 42px;
-  width: 215px;
-  margin-top: 1rem;
-}
-
-.unmissable .infos p {
-  font-size: 18px;
-  line-height: 20px;
-  margin-bottom: 20px;
-}
-
-.unmissable .infos span {
-  text-decoration: underline;
-} */
-
-/* .unmissable .caroussel {
-  background-color: green;
-  height: 100%;
-  display: flex;
-  flex: 1;
-
-  gap: 15px;
-  overflow-x: scroll;
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
-} */
-
-/* .unmissable .col {
-  border: 1px solid black;
-  height: 100%;
-  width: calc((100% - 30px) / 3);
-  flex-shrink: 0;
-}
-.unmissable .col > div {
-  border: 1px solid black;
-  width: 100%;
-  aspect-ratio: 27/ 20;
-  position: relative;
-}
-.unmissable .col img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-} */
 
 .unmissable {
-  /* border: 1px solid black; */
   height: 350px;
   display: flex;
   gap: 15px;
@@ -327,7 +251,6 @@ p {
   line-height: 20px;
   margin-bottom: 20px;
   margin-top: 20px;
-  /* background-color: aliceblue; */
 }
 
 .unmissable > div:first-child a {
@@ -335,7 +258,6 @@ p {
 }
 
 .unmissable .carrousel {
-  /* background-color: green; */
   height: 100%;
   flex: 1;
   display: flex;
@@ -357,10 +279,8 @@ p {
 }
 
 .unmissable .col {
-  /* display: flex; */
-  gap: 15px;
-  /* border: 1px solid black; */
   height: 100%;
+  gap: 15px;
   width: calc((100% - 30px) / 3);
   flex-shrink: 0;
 }
@@ -407,10 +327,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.unmissable .col i {
-  size: 2px;
+  font-size: 20px;
 }
 
 .get-away {
@@ -474,7 +391,13 @@ footer {
   align-items: center;
 }
 
+footer span {
+  font-weight: bold;
+}
+
+/* ----------------------------------------- */
 /* -----------Modal d'inscription----------- */
+/* ----------------------------------------- */
 .modal {
   display: none;
   position: fixed;
