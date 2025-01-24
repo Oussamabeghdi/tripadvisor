@@ -1,7 +1,7 @@
-GENERAL * {
-  box-sizing: border-box;
-}
+/* GENERAL * {
+} */
 body {
+  box-sizing: border-box;
   font-family: Trip SansR, sans-serif;
   font-family: Trip SansM, sans-serif;
 }
@@ -55,7 +55,7 @@ header img {
 .searchbar {
   width: 350px;
   height: 40px;
-  border-radius: 20px;
+  border-radius: 40px;
   border-color: #e0e0e0;
   background-image: url("../icon/magnifying-glass-solid.svg");
   background-size: 17px 17px;
@@ -106,8 +106,10 @@ header button {
   color: black;
   margin-left: 10px;
 }
-
-h1 + p {
+.new-text-firt-part {
+  padding: 0 5px;
+}
+p {
   font-size: 14px;
 }
 

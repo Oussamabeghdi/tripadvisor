@@ -7,8 +7,9 @@ body {
   font-family: Trip SansM, sans-serif;
 }
 .container {
-  /* width: 1135px; */
+  width: 1135px;
   margin: 0 auto;
+  padding: 0 5px;
 }
 a {
   color: inherit;
@@ -47,11 +48,17 @@ h4 {
 
 header {
   height: 60px;
+  position: relative;
 }
 header img {
   width: 190px;
 }
 
+#nav-header {
+  display: flex;
+  position: static;
+  flex-direction: row;
+}
 header nav {
   display: flex;
   align-items: center;
@@ -82,12 +89,22 @@ header button {
   font-family: inherit;
   font-size: inherit;
 }
+#nav-mobile {
+  display: none;
+}
+#menu-mobile {
+  position: absolute;
+  top: 16px;
+  left: 13px;
+  display: none;
+}
 
-.searchbar {
-  width: 350px;
-  height: 40px;
-  border-radius: 10px;
-  border-color: #e0e0e0;
+.searchbar input {
+  width: 400px;
+  height: 37px;
+  padding: 4px;
+  border-radius: 20px;
+  border-color: #e0e0e089;
   background-image: url("../icon/magnifying-glass-solid.svg");
   background-size: 17px 17px;
   background-repeat: no-repeat;
@@ -113,11 +130,27 @@ header button {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-content {
+  position: relative;
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 60%;
+}
+.modal-content h2 {
+  font-family: Trip SansR, sans-serif;
+  font-family: Trip SansM, sans-serif;
+  text-align: center;
+}
+.logo-modal {
+  width: 20px;
+  height: 20px;
+}
+.logo-modal img {
+  position: absolute;
+  top: 2%;
+  width: 60px;
+  height: 60px;
 }
 /* Styles pour le formulaire */
 .form-container {
@@ -127,20 +160,26 @@ header button {
   height: 100vh;
 }
 .form {
-  width: 500px;
+  width: 200px;
   height: 500px;
 }
 form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-label,
-input {
-  margin-bottom: 5px;
+form label {
+  /* align-self: flex-start; */
+  margin-bottom: 10px;
 }
-input {
+form input {
   height: 40px;
-  padding: 4px;
+  width: 70%;
+  padding: 12px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  border-color: rgb(192, 199, 206);
 }
 
 input:focus {
@@ -151,10 +190,11 @@ input[type="submit"] {
   margin-top: 10px;
   background-color: #4caf50;
   color: white;
+  font-size: medium;
   border: none;
   cursor: pointer;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 20px;
 }
 
 .link-to-login {
@@ -182,10 +222,12 @@ input[type="submit"] {
   color: black;
   margin-left: 10px;
 }
-
-h1 + p {
-  font-size: 14px;
+.new-text-firt-part {
+  letter-spacing: 0.5px;
 }
+/* h1 + p {
+  font-size: 14px;
+} */
 
 /* ----------------------------- */
 /*-------- Menu --------*/
@@ -251,6 +293,7 @@ h1 + p {
   font-weight: bold;
   padding: 10px;
 }
+
 p {
   line-height: 10px;
 }
@@ -280,6 +323,7 @@ p {
   padding-right: 50px;
 }
 .bloc .col1 p {
+  font-weight: 200;
   font-size: 20px;
   line-height: 20px;
   text-align: justify;
@@ -303,7 +347,7 @@ p {
 }
 
 .bloc .col2 p {
-  line-height: 15px;
+  line-height: 19px;
   margin: 15px 0;
 }
 
@@ -367,7 +411,9 @@ p {
 
   flex: 0 0 275px;
 }
-
+.col-escape {
+  width: 100%;
+}
 .col > div > h5 {
   font-size: 18px;
   font-weight: 550;
@@ -508,6 +554,7 @@ p {
 footer {
   height: 150px;
   background-color: #faf1ed;
+  width: ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -524,13 +571,15 @@ footer span {
   .container p {
     letter-spacing: 1px;
     line-height: 12px;
+    font-size: large;
+    margin: 17px 15px;
   }
   .menu div {
     width: 100%;
     margin: 0 auto;
     padding: 8px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     aspect-ratio: 4/3;
   }
   .menu span {
@@ -539,11 +588,12 @@ footer span {
   .menu {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 20px 0;
     padding: 10px;
   }
   h1 {
-    text-align: center;
+    padding: 5px;
+    /* text-align: center; */
     font-size: 36px;
   }
   .menu div {
@@ -554,7 +604,7 @@ footer span {
   .imagesBloc {
     flex-direction: row;
     justify-content: space-between;
-    /* height: auto; */
+    padding: 5px;
   }
   .imagesBloc > div {
     height: auto;
@@ -562,14 +612,16 @@ footer span {
   .col1 h2 {
     font-size: larger;
   }
-  /* .col1 p {
-      font-size: small;
-      } */
+  .unmissable-title {
+    margin-top: 30px;
+    text-align: center;
+  }
   .bloc .col1 {
     width: 100%;
     padding: 5px;
   }
   .bloc .col1 p {
+    font-weight: 400;
     text-align: justify;
     font-size: small;
   }
@@ -578,12 +630,16 @@ footer span {
   }
   .bloc {
     height: 100%;
+    width: 70%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     padding: 5px;
   }
   .unmissable {
     height: auto;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
 
     flex-direction: column;
@@ -600,7 +656,7 @@ footer span {
     height: auto; /* Ajuste la hauteur automatiquement */
   }
   .unmissable .col {
-    width: 100%;
+    width: 60%;
     flex: none;
   }
   .unmissable.col > div {
@@ -619,11 +675,11 @@ footer span {
     flex-direction: column;
   }
 }
+
+/* -------------Responsive----------------- */
+/* ---------------------------------------- */
+
 @media screen and (max-width: 390px) {
-  /* .menu {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    } */
   .menu span {
     font-size: small;
   }
@@ -634,7 +690,25 @@ footer span {
     max-width: 1135px;
     /* padding: 15px; */
   }
-
+  /* .modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  } */
   header img {
     width: 150px;
   }
@@ -664,18 +738,121 @@ footer span {
     flex-direction: column;
   }
   header nav {
+    align-items: flex-start;
+  }
+  header nav a {
+    padding: 5px;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .searchbar {
+    width: 800px;
+  }
+  .searchbar input {
+    width: 100%;
+    /* flex: 1 1; */
+  }
+  #nav-header > a {
     display: none;
   }
-  .searchbar {
-    max-width: 600px;
+  #nav-header > button {
+    display: none;
   }
-  .menu {
-    flex-wrap: wrap;
+  /* #nav-mobile {
+    display: block;
+  } */
+  #menu-mobile {
+    display: block;
+  }
+
+  .fa-bars {
+    width: 40px;
+    height: 40px;
+    color: black;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
   }
   .menu div {
     /* flex: 1; */
     width: calc((100% - 10px) / 5);
     height: 80px;
     aspect-ratio: 4 / 3;
+  }
+  #nav-mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 700px;
+    gap: 30px;
+    background-color: rgba(255, 255, 255, 0.944);
+    position: absolute;
+    top: 60px; /* Ajustez selon la hauteur de votre header */
+    right: 10px;
+    z-index: 1;
+    /* width: calc(100% - 20px);  */
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  /* Afficher le menu lorsque la classe "menu-open" est active */
+  #nav-mobile.menu-open {
+    display: flex;
+  }
+
+  /* Bouton pour le menu mobile */
+  #menu-mobile button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .get-away .col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .get-away .col-left h4 {
+    margin-left: 10px;
+  }
+  .get-away .col-left {
+    padding: 0 0 7px 0;
+  }
+  .get-away .col-right img {
+    border-radius: 5px;
+    margin-bottom: 9px;
+  }
+  .get-away .col-left p {
+    line-height: 26px;
+  }
+  .unmissable .carrousel .col img {
+    border-radius: 9px;
+    border: 1px solid black;
+  }
+  .unmissable .col > div {
+    aspect-ratio: 1.75;
   }
 }

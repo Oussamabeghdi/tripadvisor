@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="dans cette exercice j'ai créer la réplique du site tripadvisor"
+      content="Dans cette exercice j'ai créer la réplique du site tripadvisor"
     />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
@@ -25,15 +25,14 @@
     <header>
       <div class="container">
         <img src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg" />
-        <div>
-          <input class="searchbar" type="text" />
+        <div class="searchbar">
+          <input type="text" />
         </div>
 
-        <nav>
+        <nav id="nav-header">
           <a href="#"><i class="fa-solid fa-pen"></i> <span>Avis</span></a>
           <a href="#"><i class="fa-regular fa-heart"></i> <span>Voyages</span></a>
           <a href="#"><i class="fa-regular fa-bell"></i> <span>Alertes</span></a>
-          <!-- <button id="open-modal">Connectez-vous</button> -->
           <button onclick="document.getElementById('modal').style.display='block'">
             Connectez-vous
           </button>
@@ -42,38 +41,93 @@
             <div class="modal-content">
               <span class="close">&times;</span>
               <h2>Inscription</h2>
+              <div class="logo-modal">
+                <img src="./assets/icon/tripadvisor_logo_icon_169414.ico" alt="logo" />
+              </div>
+
               <form>
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" required />
+                <label for="nom"></label>
+                <input type="text" id="nom" name="nom" required placeholder="Nom" />
 
-                <label for="prenom">Prénom :</label>
-                <input type="text" id="prenom" name="prenom" required />
+                <label for="prenom"></label>
+                <input type="text" id="prenom" name="prenom" required placeholder="Prenom" />
 
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required />
+                <label for="email"></label>
+                <input type="email" id="email" name="email" required placeholder="Email" />
 
-                <label for="password">Mot de passe :</label>
-                <input type="password" id="password" name="password" required />
+                <label for="password"></label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  placeholder="Mot de passe"
+                />
 
                 <input type="submit" value="S'inscrire" />
               </form>
             </div>
           </div>
 
-          <!-- <button
+          <a href="#"><i class="fa-solid fa-cart-shopping"></i><span>Panier</span></a>
+        </nav>
+        <!-- <button
             onclick="window.location.href='./Formulaire/formulaire_de_connexion.html' "
           >
             Connectez-vous
           </button> -->
+        <nav id="nav-mobile">
+          <button id="connect-btn" onclick="document.getElementById('modal').style.display='block'">
+            Connectez-vous
+          </button>
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Inscription</h2>
+              <div class="logo-modal">
+                <img src="./assets/icon/tripadvisor_logo_icon_169414.ico" alt="logo" />
+              </div>
+
+              <form>
+                <label for="nom"></label>
+                <input type="text" id="nom" name="nom" required placeholder="Nom" />
+
+                <label for="prenom"></label>
+                <input type="text" id="prenom" name="prenom" required placeholder="Prenom" />
+
+                <label for="email"></label>
+                <input type="email" id="email" name="email" required placeholder="Email" />
+
+                <label for="password"></label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  placeholder="Mot de passe"
+                />
+
+                <input type="submit" value="S'inscrire" />
+              </form>
+            </div>
+          </div>
+          <a href="#"><i class="fa-solid fa-pen"></i> <span>Avis</span></a>
+          <a href="#"><i class="fa-regular fa-heart"></i> <span>Voyages</span></a>
+          <a href="#"><i class="fa-regular fa-bell"></i> <span>Alertes</span></a>
           <a href="#"><i class="fa-solid fa-cart-shopping"></i><span>Panier</span></a>
         </nav>
+        <div id="menu-mobile">
+          <button>
+            <span><i class="fa-solid fa-bars fa-xl"></i></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <main>
-      <div class="container">
+    <main class="container">
+      <div>
         <h1><span>Explorez</span><span class="second-word-title">Paris</span></h1>
-        <p>
+        <p class="new-text-firt-part">
           Les revenus influencent le choix des expériences présentées sur cette page : en savoir
           plus.
         </p>
@@ -135,7 +189,7 @@
             <div><img src="./assets/img/map.png" alt="" /></div>
           </div>
         </section>
-        <h2>Paris : les immanquables</h2>
+        <h2 class="unmissable-title">Paris : les immanquables</h2>
         <section class="unmissable">
           <div>
             <h3>Se divertir</h3>
@@ -446,12 +500,12 @@
         </section>
       </div>
     </main>
-    <footer>
+    <footer class="container">
       <div>
         <p>Made by <span>Oussama Beghdi</span> - 2024</p>
       </div>
     </footer>
-    <script>
+    <!-- <script>
       // Fermer le modal lorsqu'on clique en dehors de la zone du formulaire
       window.onclick = function (event) {
         var modal = document.getElementById("modal");
@@ -465,6 +519,52 @@
         }
         closeModalBtn.addEventListener("click", closeModal);
       };
+    </script>
+    <script>
+      const menuMobileButton = document.getElementById("menu-mobile");
+      const navHeader = document.getElementById("nav-mobile");
+
+      // Ajouter un événement pour afficher/masquer le menu
+      menuMobileButton.addEventListener("click", () => {
+        // Toggle une classe pour afficher/masquer le menu
+        navHeader.classList.toggle("menu-open");
+      });
+     
+    </script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuMobile = document.getElementById("menu-mobile");
+        const navHeader = document.getElementById("nav-mobile");
+        const modal = document.getElementById("modal");
+        const closeModal = document.querySelector(".modal .close");
+        const connectButton = document.getElementById("connect-btn");
+
+        // Gestion de l'ouverture/fermeture du menu mobile
+        menuMobile.addEventListener("click", () => {
+          navHeader.classList.toggle("menu-open");
+        });
+
+        // Gestion du bouton "Connectez-vous"
+        connectButton.addEventListener("click", (event) => {
+          event.preventDefault(); // Empêche l'action par défaut si nécessaire
+          // Ferme le menu mobile
+          navHeader.classList.remove("menu-open");
+          // Affiche la modale
+          modal.style.display = "block";
+        });
+
+        // Gestion de la fermeture de la modale
+        closeModal.addEventListener("click", () => {
+          modal.style.display = "none";
+        });
+
+        // Ferme la modale si l'utilisateur clique à l'extérieur de son contenu
+        window.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+      });
     </script>
   </body>
 </html>
